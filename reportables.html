@@ -123,13 +123,23 @@
       <div class="table-toolbar">
         <div class="search" style="min-width:260px;">
           <span class="search-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg></span>
-          <input class="input" placeholder="Search document or community" />
+          <input class="input" placeholder="Search reportable ID, document, or community" />
         </div>
         <span class="dropdown">All communities <span class="dropdown-chevron"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></span>
         <span class="dropdown">All types <span class="dropdown-chevron"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></span>
-        <span class="dropdown" style="min-width:150px;">All flags <span class="dropdown-chevron"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></span>
+        <span class="dropdown" style="min-width:170px;">All review states <span class="dropdown-chevron"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></span>
+        <span class="dropdown" style="min-width:150px;">All alerts <span class="dropdown-chevron"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></span>
         <span class="toolbar-spacer"></span>
         <button class="btn btn-surface"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3" /> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <path d="m7 10 5 5 5-5" /></svg> Export</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4);">
+        <div class="toggle-group">
+          <button class="toggle" aria-pressed="false"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12" /> <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /></svg> Needs my review <span class="badge is-neutral">7</span></button>
+          <button class="toggle" aria-pressed="false"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 18v-2a4 4 0 0 0-4-4H4" /> <path d="m9 17-5-5 5-5" /></svg> Changes requested <span class="badge is-neutral">2</span></button>
+          <button class="toggle" aria-pressed="false"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /> <path d="M4 22v-7" /></svg> Flagged for oversight <span class="badge is-neutral">5</span></button>
+        </div>
+        <span class="t-1" style="color:var(--fg-low);">Needs my review holds every reportable a community has sent to you, plus anything flagged for oversight while the investigation is still open.</span>
       </div>
 
       <div class="table-wrap">
@@ -137,82 +147,100 @@
           <thead>
             <tr>
               <th class="col-check"><label class="checkbox"><input type="checkbox"></label></th>
-              <th class="is-sortable">Document name <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
+              <th style="min-width:210px;" class="is-sortable">Reportable <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
               <th class="is-sortable">Incident date <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
               <th class="is-sortable">Community <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
               <th class="is-sortable">Reportable type <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
-              <th>Tags</th>
+              <th class="is-sortable">Review <span class="th-sort"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4" /> <path d="M17 20V4" /> <path d="m3 8 4-4 4 4" /> <path d="M7 4v16" /></svg></span></th>
               <th>Investigation</th>
-              <th>Alerts</th>
-              <th style="width:44px;"></th>
+              <th>Frequency</th>
+              <th style="width:80px;"></th>
             </tr>
           </thead>
           <tbody>
             <tr data-href="reportable-detail.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Fall-with-injury-0312.pdf</td>
+              <td><div><span class="code">RPT-000088</span></div><div class="cell-sub">Fall-with-injury-0312.pdf</div></td>
               <td>Mar 12, 2026</td>
               <td>Cedar Ridge Care Center</td>
               <td>Fall with injury</td>
-              <td><span class="badge is-neutral">Fall</span> <span class="badge is-neutral">Injury</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-neutral">Draft</span></td>
               <td><span class="badge is-success">Attached</span></td>
-              <td><span class="badge is-danger">Flagged</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td><span class="badge is-danger">Over threshold</span></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000088" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
-            <tr data-href="reportable-detail.html">
+            <tr data-href="reportable-review.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Elopement-0309.pdf</td>
+              <td><div><span class="code">RPT-000087</span></div><div class="cell-sub">Elopement-0309.pdf</div></td>
               <td>Mar 9, 2026</td>
               <td>Fieldstone Memory Care</td>
               <td>Elopement</td>
-              <td><span class="badge is-neutral">Elopement</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-info">In review</span><span title="Flagged for compliance oversight" aria-label="Flagged for compliance oversight" style="color:var(--warning-text);display:inline-flex;vertical-align:-3px;margin-left:var(--space-1);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /> <path d="M4 22v-7" /></svg></span></td>
               <td><span class="badge is-success">Attached</span></td>
-              <td><span class="badge is-danger">Flagged</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td><span class="badge is-danger">Over threshold</span></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000087" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
             <tr data-href="reportable-detail.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Medication-error-0304.pdf</td>
+              <td><div><span class="code">RPT-000086</span></div><div class="cell-sub">Medication-error-0304.pdf</div></td>
               <td>Mar 4, 2026</td>
               <td>Bickford of Battle Creek</td>
               <td>Medication error</td>
-              <td><span class="badge is-neutral">Medication</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-success">Reviewed</span></td>
               <td><span class="badge is-neutral">Not attached</span></td>
-              <td><span class="badge is-neutral">Not flagged</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td><span class="badge is-neutral">Within limit</span></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000086" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
-            <tr data-href="reportable-detail.html">
+            <tr data-href="reportable-review.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Resident-altercation-0228.pdf</td>
+              <td><div><span class="code">RPT-000085</span></div><div class="cell-sub">Resident-altercation-0228.pdf</div></td>
               <td>Feb 28, 2026</td>
               <td>Cedar Ridge Care Center</td>
               <td>Resident to resident</td>
-              <td><span class="badge is-neutral">Altercation</span> <span class="badge is-neutral">Behavior</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-warning">Changes requested</span><span title="Flagged for compliance oversight" aria-label="Flagged for compliance oversight" style="color:var(--warning-text);display:inline-flex;vertical-align:-3px;margin-left:var(--space-1);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /> <path d="M4 22v-7" /></svg></span></td>
               <td><span class="badge is-success">Attached</span></td>
               <td><span class="badge is-warning">Watch</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000085" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
             <tr data-href="reportable-detail.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Skin-injury-unknown-0221.pdf</td>
+              <td><div><span class="code">RPT-000084</span></div><div class="cell-sub">Skin-injury-unknown-0221.pdf</div></td>
               <td>Feb 21, 2026</td>
               <td>Harbor Point Assisted Living</td>
               <td>Injury of unknown origin</td>
-              <td><span class="badge is-neutral">Skin</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-neutral">Draft</span></td>
               <td><span class="badge is-neutral">Not attached</span></td>
-              <td><span class="badge is-neutral">Not flagged</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td><span class="badge is-neutral">Within limit</span></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000084" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
-            <tr data-href="reportable-detail.html">
+            <tr data-href="reportable-review.html">
               <td class="col-check"><label class="checkbox"><input type="checkbox"></label></td>
-              <td class="cell-strong">Abuse-allegation-0214.pdf</td>
+              <td><div><span class="code">RPT-000083</span></div><div class="cell-sub">Abuse-allegation-0214.pdf</div></td>
               <td>Feb 14, 2026</td>
-              <td>Lakeview Senior Living</td>
+              <td>Cedar Ridge Care Center</td>
               <td>Abuse allegation</td>
-              <td><span class="badge is-neutral">Abuse</span> <span class="badge is-neutral">Investigation</span></td>
+              <td style="white-space:nowrap;"><span class="badge is-info">In review</span><span title="Flagged for compliance oversight" aria-label="Flagged for compliance oversight" style="color:var(--warning-text);display:inline-flex;vertical-align:-3px;margin-left:var(--space-1);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /> <path d="M4 22v-7" /></svg></span></td>
               <td><span class="badge is-success">Attached</span></td>
-              <td><span class="badge is-danger">Flagged</span></td>
-              <td><button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button></td>
+              <td><span class="badge is-danger">Over threshold</span></td>
+              <td style="white-space:nowrap;">
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Copy link to RPT-000083" title="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg></button>
+                <button class="btn btn-ghost is-sm is-icon" aria-label="Row actions"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /> <circle cx="19" cy="12" r="1" /> <circle cx="5" cy="12" r="1" /></svg></button>
+              </td>
             </tr>
           </tbody>
         </table>

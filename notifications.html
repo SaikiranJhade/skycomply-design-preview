@@ -107,7 +107,7 @@
         <header class="page-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
           <div>
             <h1>Notifications</h1>
-            <p>You have 3 unread notifications.</p>
+            <p>You have 4 unread notifications.</p>
           </div>
           <button class="btn btn-surface" style="flex:0 0 auto;"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg> Mark all as read</button>
         </header>
@@ -127,6 +127,14 @@
 
           <div class="card" style="padding:0;overflow:hidden;">
             <a class="mail-item is-unread is-active">
+              <div class="mail-from">
+                <span class="mail-name">RPT-000083 was sent for your review</span>
+                <span class="mail-time">2 min ago</span>
+              </div>
+              <div class="mail-snippet">Abuse allegation at Cedar Ridge Care Center, sent by Sean ODonnell</div>
+              <div style="margin-top:var(--space-1);"><span class="badge is-info">Review</span></div>
+            </a>
+            <a class="mail-item is-unread">
               <div class="mail-from">
                 <span class="mail-name">POC WA-2026-0142 needs your approval</span>
                 <span class="mail-time">10 min ago</span>
@@ -172,14 +180,15 @@
         <aside class="card">
           <div class="panel-head"><div class="panel-title">Notification details</div></div>
           <div class="data-list" style="margin-bottom:var(--space-4);">
-            <span class="dl-label">Type</span><span class="dl-value"><span class="badge is-warning">Approval</span></span>
-            <span class="dl-label">Assigned by</span><span class="dl-value"><span class="cell-person"><span class="avatar c1" style="width:24px;height:24px;font-size:10px;">DW</span>Dana Whitfield</span></span>
+            <span class="dl-label">Type</span><span class="dl-value"><span class="badge is-info">Review</span></span>
+            <span class="dl-label">Sent by</span><span class="dl-value"><span class="cell-person"><span class="avatar c2" style="width:24px;height:24px;font-size:10px;">SO</span>Sean ODonnell</span></span>
             <span class="dl-label">Community</span><span class="dl-value">Cedar Ridge Care Center</span>
-            <span class="dl-label">Survey number</span><span class="dl-value">WA-2026-0142</span>
-            <span class="dl-label">Due date</span><span class="dl-value">Mar 18, 2026</span>
-            <span class="dl-label">POC status</span><span class="dl-value"><span class="badge is-warning">Pending review</span></span>
+            <span class="dl-label">Reportable ID</span><span class="dl-value"><span class="code">RPT-000083</span></span>
+            <span class="dl-label">Incident date</span><span class="dl-value">Feb 14, 2026</span>
+            <span class="dl-label">Review status</span><span class="dl-value"><span class="badge is-info">In review</span></span>
           </div>
-          <button class="btn btn-solid" style="justify-content:center;">Open POC</button>
+          <a class="btn btn-solid" href="reportable-review.html" style="justify-content:center;text-decoration:none;">Open reportable</a>
+          <div class="t-1" style="color:var(--fg-low);margin-top:var(--space-3);">The same notification is sent by email and opens this record directly.</div>
         </aside>
       </div>
       </div>

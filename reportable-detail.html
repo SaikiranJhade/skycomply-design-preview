@@ -101,20 +101,32 @@
       <div class="breadcrumbs">
         <a href="dashboard.html">Home</a><span class="sep"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg></span>
         <a href="reportables.html">Reportables</a><span class="sep"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg></span>
-        <span class="current">Fall-with-injury-0312.pdf</span>
+        <span class="current">RPT-000088</span>
       </div>
 
       <div class="content-body">
         <header class="page-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
           <div>
-            <h1>Review reportable</h1>
+            <h1>Review reportable RPT-000088</h1>
             <p>Confirm the extracted details before saving this reportable.</p>
           </div>
           <div style="display:flex;gap:var(--space-2);flex:0 0 auto;">
-            <button class="btn btn-surface">Discard</button>
-            <button class="btn btn-solid"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg> Save reportable</button>
+            <button class="btn btn-surface"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /> <path d="M15 7h2a5 5 0 1 1 0 10h-2" /> <line x1="8" x2="16" y1="12" y2="12" /></svg> Copy link</button>
+            <button class="btn btn-surface"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg> Save</button>
+            <button class="btn btn-solid"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg> Send for review</button>
           </div>
         </header>
+
+      <section class="card" style="padding:var(--space-4);margin-bottom:var(--space-5);">
+        <div style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+          <span class="badge is-neutral">Draft</span>
+          <span class="divider is-vertical" style="height:20px;"></span>
+          <label class="switch"><input type="checkbox"> <span class="t-2">Flag for compliance oversight</span></label>
+          <span style="flex:1 1 auto;"></span>
+          <span class="t-1" style="color:var(--fg-low);">Not sent for review yet.</span>
+        </div>
+        <div class="t-1" style="color:var(--fg-low);margin-top:var(--space-3);">Flagging puts this reportable in compliance's queue straight away, before the investigation is finished. Sending for review notifies compliance and HR in the app and by email, with a link to this record, and moves it to In review.</div>
+      </section>
 
       <div style="display:grid;grid-template-columns:1fr 320px;gap:var(--space-6);align-items:start;">
         <div class="stack-5">
@@ -193,13 +205,40 @@
               <div><strong>Frequency flag.</strong> Third fall with injury at this community in 30 days.</div>
             </div>
             <div class="data-list">
-              <span class="dl-label">Status</span><span class="dl-value"><span class="badge is-warning">Draft</span></span>
+              <span class="dl-label">Reportable ID</span><span class="dl-value"><span class="code">RPT-000088</span></span>
+              <span class="dl-label">Review status</span><span class="dl-value"><span class="badge is-neutral">Draft</span></span>
               <span class="dl-label">Community</span><span class="dl-value">Cedar Ridge Care Center</span>
               <span class="dl-label">State</span><span class="dl-value">WA</span>
               <span class="dl-label">Extracted</span><span class="dl-value">Mar 12, 2026</span>
               <span class="dl-label">Created by</span><span class="dl-value"><span class="cell-person"><span class="avatar c1" style="width:24px;height:24px;font-size:10px;">DW</span>Dana Whitfield</span></span>
             </div>
           </section>
+
+          <section class="card">
+            <div class="panel-head">
+              <div>
+                <div class="panel-title">Who reviews this</div>
+                <div class="panel-sub">Defaults set in Configurations.</div>
+              </div>
+            </div>
+            <div class="data-list" style="margin-bottom:var(--space-4);">
+              <span class="dl-label">Compliance</span><span class="dl-value"><span class="cell-person"><span class="avatar c3" style="width:24px;height:24px;font-size:10px;">MC</span>Monica Chopra</span></span>
+              <span class="dl-label">HR</span><span class="dl-value"><span class="cell-person"><span class="avatar c5" style="width:24px;height:24px;font-size:10px;">FG</span>Faye Gordon</span></span>
+              <span class="dl-label">Sent for review</span><span class="dl-value">Not sent</span>
+            </div>
+            <div class="t-1" style="color:var(--fg-low);">Both reviewers are notified in the app and by email. Neither needs the reportable ID pasted into a message: the notification opens this record.</div>
+          </section>
+
+          <section class="card">
+            <div class="panel-title" style="margin-bottom:var(--space-2);">Share this reportable</div>
+            <div class="panel-sub" style="margin-bottom:var(--space-3);">Opens RPT-000088 directly. Sign-in still required; the recipient sees it only if they have Reportables access in this instance.</div>
+            <div style="display:flex;gap:var(--space-2);align-items:center;">
+              <input class="input" readonly value="app.skycomply.ai/r/RPT-000088" aria-label="Link to RPT-000088" style="flex:1 1 auto;" />
+              <button class="btn btn-surface is-icon" aria-label="Copy link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button>
+            </div>
+            <div class="field-hint" style="margin-top:var(--space-2);">Copied links are recorded in the reportable's activity trail.</div>
+          </section>
+
           <section class="card">
             <div class="panel-title" style="margin-bottom:var(--space-3);">Related</div>
             <div class="stack-5" style="gap:var(--space-2);">

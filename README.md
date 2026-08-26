@@ -3,10 +3,11 @@
 Static HTML mockups of the core compliance and ADR workflows, built with the
 `radix-design-system` skill (`.claude/skills/radix-design-system/`).
 
-Open [`index.html`](index.html) in a browser. No build step, no server, no dependencies
-beyond the Inter webfont.
+Open [`index.html`](index.html) in a browser, or run `npm run dev` and visit
+**http://localhost:5000/design** to browse them beside the running app. No build step, no
+dependencies beyond the Inter webfont.
 
-## Screens (30 + contact sheet)
+## Screens (31 + contact sheet)
 
 **Core compliance**
 
@@ -33,6 +34,7 @@ beyond the Inter webfont.
 |---|---|---|---|
 | `reportables.html` | Reportables | Data Table | `pages/Reportables.tsx` |
 | `reportable-detail.html` | Review Reportable | List + Right Rail | `pages/ReportableDetail.tsx` |
+| `reportable-review.html` | Reportable, Compliance Review | List + Right Rail | `pages/ReportableDetail.tsx` |
 | `reportable-bulk-upload.html` | Bulk Upload Reportables | Queue | `pages/ReportableBulkUpload.tsx` |
 | `licenses.html` | Licenses | KPI + Data Table | `pages/Licenses.tsx` |
 | `license-detail.html` | License Detail | List + Right Rail | `pages/LicenseDetail.tsx` |
@@ -86,8 +88,9 @@ node design/radix/_build.mjs
 - `_ui.mjs` holds the shared presentation helpers (stat card, metric card, bar list, column
   chart, donut, sortable header, pagination) so every screen renders them identically.
 - `_index.mjs` is the contact sheet. Add a screen there when you add one.
-- `tokens.css` and `dashboard.css` are copies of the skill assets. Edit them in the skill,
-  then re-copy, never fork them here.
+- `tokens.css` and `dashboard.css` are **generated** from the skill assets by
+  `design/sync.mjs`. Edit the skill, then run `npm run design:sync` — never edit them here,
+  and never fork them. See [`design/README.md`](../README.md).
 
 ## Sample data
 
@@ -110,7 +113,7 @@ This contradicts `references/rules.md` section 7, which requires step 11 to clea
 steps 1 to 2 of the same hue. The skill's older `references/tokens.css` had the accessible
 value `#9a5b00`; the newer `assets/tokens.css` replaced it with the brand amber.
 
-It now shows up in **43 places across the 30 screens**: every `.link` (including all 30 "Open
+It now shows up in **44 places across the 31 screens**: every `.link` (including all 31 "Open
 screen" links on the contact sheet), the active settings tab underline label, the active
 `.pane-folder` in POC Builder and skyAgent, and the "Reviewing" badge on the ADR case. These
 mockups prefer `.btn-surface` and status-scale badges to limit the blast radius, but the fix
