@@ -1,0 +1,1 @@
+import{j as e}from"./vendor-react-Cu8aE2d9.js";const s=({label:n,className:t})=>e.jsx("span",{className:`inline-block text-[10px] font-bold tracking-wider px-2 py-0.5 rounded ${t}`,children:n});export{s as E};

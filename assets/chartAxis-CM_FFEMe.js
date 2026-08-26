@@ -1,0 +1,1 @@
+import{r}from"./vendor-react-Cu8aE2d9.js";function s(e,t=300){const[n,o]=r.useState(e);return r.useEffect(()=>{const u=setTimeout(()=>o(e),t);return()=>clearTimeout(u)},[e,t]),n}function c(e){return!Number.isFinite(e)||e<=0?1:Math.ceil(e*1.15)}export{c as b,s as u};

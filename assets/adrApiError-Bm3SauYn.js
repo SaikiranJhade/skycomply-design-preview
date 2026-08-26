@@ -1,0 +1,1 @@
+function c(s,e){if(!(s instanceof Error))return{message:e};const o=s.message||e,t=o.replace(/^\d{3}:\s*/,"");try{const r=JSON.parse(t),n=typeof r?.details?.blocking=="number"?r.details.blocking:void 0;return{message:typeof r?.error=="string"&&r.error.trim()?r.error:e,blocking:n}}catch{return{message:o||e}}}export{c as p};

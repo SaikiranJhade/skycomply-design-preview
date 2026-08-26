@@ -1,0 +1,1 @@
+import{p as o,i,a as n}from"./vendor-date-bQIGIsVZ.js";const f="MM-dd-yyyy";function y(t,r="Not set"){if(!t)return r;const s=typeof t=="string"?o(t):t;return i(s)?n(s,f):typeof t=="string"?t:r}export{f as D,y as f};

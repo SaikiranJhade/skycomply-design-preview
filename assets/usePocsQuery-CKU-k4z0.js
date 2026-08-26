@@ -1,0 +1,1 @@
+import{a as n}from"./vendor-query-DjnZDTMH.js";import{g as a,b as t,C as o}from"./index-BKWZINJq.js";const r=["/api/pocs"];function i(){const e=a(),{isTenantReady:s}=t();return n({queryKey:[...r,{instanceId:e}],enabled:s,staleTime:o.REFERENCE})}export{i as u};
